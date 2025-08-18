@@ -12,7 +12,7 @@
 - **DM for credit or removal request (no copyright intended) ©All rights and credits for the original content belong to Google Cloud [Google Cloud Skill Boost website](https://www.cloudskillsboost.google/)** 🙏
 
 ---
-### 🚀 Open this link in a new tab and download the file  [Click Here](https://github.com/Techcps/GSP/blob/main/Develop%20GenAI%20Apps%20with%20Gemini%20and%20Streamlit%3A%20Challenge%20Lab/prompt-v1.0.0.ipynb)
+### 🚀 Open this link in a new tab and download the file  [Click Here](https://github.com/Techcps/GSP/blob/main/Develop%20GenAI%20Apps%20with%20Gemini%20and%20Streamlit%3A%20Challenge%20Lab/prompt-v2.0.0.ipynb)
 ---
 
 ### 🚨Copy and run the below commands in Cloud Shell:
