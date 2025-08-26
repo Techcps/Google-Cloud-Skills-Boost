@@ -13,6 +13,10 @@ gsutil -m cp -r gs://spls/gsp233/* .
 
 cd tf-gke-k8s-service-lb
 
+cat main.tf
+
+cat k8s.tf
+
 terraform init
 
 terraform apply -var="region=$REGION" -var="location=$ZONE" --auto-approve
