@@ -31,7 +31,7 @@ bq query --use_legacy_sql=false --destination_table customer_details.male_custom
 ### 3. Export a BigQuery table to Cloud Storage
    - _Exports the table customer_details.male_customers to a Cloud Storage bucket as a CSV file._
 ```
-bq extract customer_details.male_customers gs://qwiklabs-gcp-01-e1f672330fd9-bucket/exported_male_customers.csv
+bq extract customer_details.male_customers gs://bucket_name/exported_male_customers.csv
 ```
 
 ---
