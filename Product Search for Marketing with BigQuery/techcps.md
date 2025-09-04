@@ -13,15 +13,22 @@
 
 ---
 
-- **Upload the csv data in your table from pre-created cloud storage bucket named as bucket_name. The precreated bucket already has csv file.**
+### 1. Upload CSV Data 
+- **_Upload the csv data in your table from pre-created cloud storage bucket named as bucket_name. The precreated bucket already has csv file._**
 ```
 bq load --source_format=CSV --skip_leading_rows=1 --autodetect products.products_information gs://bucket_name/products.csv
 ```
-- **Create a search index on the table_name table for all the columns.**
+---
+
+### 2. Create a Search Index
+- **_Create a search index on the table_name table for all the columns._**
 ```
 bq query --use_legacy_sql=false 'CREATE SEARCH INDEX product_search_index ON products.products_information(ALL COLUMNS)'
 ```
-- **Run a query to search across all columns of the table_name table for the value 22 oz Water Bottle product and returns the rows that contain this value using SEARCH method.**
+---
+
+### 3. Run a Search Query
+- **_Run a query to search across all columns of the table_name table for the value 22 oz Water Bottle product and returns the rows that contain this value using SEARCH method._**
 ```
 bq query --use_legacy_sql=false 'SELECT * FROM products.products_information WHERE SEARCH(products_information, "22 oz Water Bottle")'
 ```
