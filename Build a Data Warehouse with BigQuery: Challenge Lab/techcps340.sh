@@ -14,20 +14,21 @@ bq mk $DEVSHELL_PROJECT_ID:covid
 
 sleep 15
 
+
 bq query --use_legacy_sql=false \
 "
 CREATE OR REPLACE TABLE $DATASET_CP1.oxford_policy_tracker
 PARTITION BY date
 OPTIONS(
-partition_expiration_days=1445,
-description='oxford_policy_tracker table in the COVID 19 Government Response public dataset with  an expiry time set to 90 days.'
+  partition_expiration_days=2175,
+  description='oxford_policy_tracker table in the COVID 19 Government Response public dataset with an expiry time set to 2175 days.'
 ) AS
 SELECT
-   *
+  *
 FROM
-   \`bigquery-public-data.covid19_govt_response.oxford_policy_tracker\`
+  \`bigquery-public-data.covid19_govt_response.oxford_policy_tracker\`
 WHERE
-   alpha_3_code NOT IN ('GBR', 'BRA', 'CAN','USA')
+  alpha_3_code NOT IN ('GBR', 'BRA', 'CAN','USA')
 "
 
 
