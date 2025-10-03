@@ -95,17 +95,16 @@ spec:
     spec:
       containers:
       - name: quiz-frontend
-        image: gcr.io/$GCLOUD_PROJECT/quiz-frontend
+        image: $REGION-docker.pkg.dev/$DEVSHELL_PROJECT_ID/container-dev-repo/quiz-frontend:v1
         imagePullPolicy: Always
         ports:
         - name: http-server
           containerPort: 8080
         env:
           - name: GCLOUD_PROJECT
-            value: $GCLOUD_PROJECT
+            value: $PROJECT_ID
           - name: GCLOUD_BUCKET
             value: $GCLOUD_BUCKET
-
 EOF_CP
 
 
@@ -143,14 +142,13 @@ spec:
     spec:
       containers:
       - name: quiz-backend
-        image: gcr.io/$GCLOUD_PROJECT/quiz-backend
+        image: $REGION-docker.pkg.dev/$DEVSHELL_PROJECT_ID/container-dev-repo/quiz-backend:v1
         imagePullPolicy: Always
         env:
           - name: GCLOUD_PROJECT
-            value: $GCLOUD_PROJECT
+            value: $PROJECT_ID
           - name: GCLOUD_BUCKET
             value: $GCLOUD_BUCKET
-
 EOF_CP
 
 
